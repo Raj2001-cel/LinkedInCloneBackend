@@ -40,7 +40,11 @@ public class Experience {
     private User user;
 
 
+    public Experience(){
+
+    }
     public Experience(String companyName, String jobRole, Long startDate, Long endDate, String jobDescription, String mediaUrl, boolean isPresent,User user) {
+        super();
         this.companyName = companyName;
         this.jobRole = jobRole;
         this.startDate = startDate;
