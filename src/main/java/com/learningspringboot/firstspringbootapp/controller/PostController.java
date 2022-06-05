@@ -29,7 +29,7 @@ public class PostController {
 
     @PostMapping(path = "/savepost/{userId}")
     public ResponseEntity<Map<String, Post>> savePost(@PathVariable String userId,@RequestBody PostRequestModel postrequestbody){
-        User fetchedUser = userService.getUserById(Long.parseLong(userId));
+       User fetchedUser = userService.getUserById(Long.parseLong(userId));
        Post post =  new Post(postrequestbody.getImage_url(),postrequestbody.getCaption(),postrequestbody.getDescription(),postrequestbody.getLikes(),postrequestbody.getDocument_url(),fetchedUser);
        System.out.println(post.getUser().getUser_name());
        Post savedPost =  postServiceImpl.savePost(post);
