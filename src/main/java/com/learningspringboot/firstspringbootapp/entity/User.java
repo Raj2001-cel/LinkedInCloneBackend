@@ -26,6 +26,16 @@ public class User {
     private String last_Name;
     private Long dateOf_Birth;
 
+
+    public User(String user_name, String pass_word, String confirm_Password, String first_Name, String last_Name, Long dateOf_Birth) {
+        this.user_name = user_name;
+        this.pass_word = pass_word;
+        this.confirm_Password = confirm_Password;
+        this.first_Name = first_Name;
+        this.last_Name = last_Name;
+        this.dateOf_Birth = dateOf_Birth;
+    }
+
     public String getUser_name() {
         return user_name;
     }
